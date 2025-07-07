@@ -1,0 +1,74 @@
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild"
+
+# Environment variables for functions
+[context.production.environment]
+  BUSINESS_EMAIL = "wisesoccerfootballleague@gmail.com"
+  EMAIL_USER = "wisesoccerfootballleague@gmail.com"
+
+[context.deploy-preview.environment]
+  BUSINESS_EMAIL = "wisesoccerfootballleague@gmail.com"
+  EMAIL_USER = "wisesoccerfootballleague@gmail.com"
+
+[context.branch-deploy.environment]
+  BUSINESS_EMAIL = "wisesoccerfootballleague@gmail.com"
+  EMAIL_USER = "wisesoccerfootballleague@gmail.com"
+
+# Handle client-side routing
+[[redirects]]
+  from = "/about"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/play-zones"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/events"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/faq"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/waiver"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/book"
+  to = "/index.html"
+  status = 200
