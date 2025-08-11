@@ -31,13 +31,13 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-primary-50 to-blue-50">
         <ScrollToTop />
-        <VisitorTracker 
+        {/* <VisitorTracker 
           enabled={true}
           trackPageViews={true}
           trackEvents={true}
           trackScrollDepth={true}
           sessionTimeout={30}
-        />
+        /> */}
         {/* <CanadaDayBanner /> */}
         {/* <CanadaDayMobilePopup /> */}
         <Header />
@@ -53,7 +53,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/book" element={<BookingPage />} />
             <Route path="/waiver" element={<WaiverPage />} />
-            <Route path="/admin" element={<AdminPage />} />
+            {/* <Route path="/admin" element={<AdminPage />} /> */}
           </Routes>
         </main>
         <Footer />
